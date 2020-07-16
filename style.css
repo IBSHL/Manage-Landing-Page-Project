@@ -12,22 +12,6 @@
   --very-dark-blue: hsl(233, 12%, 13%);
   --very-pale-red: hsl(13, 100%, 96%);
   --very-light-gray: hsl(0, 0%, 98%);
-
-  --btn-active: hsl(12, 92%, 72%);
-
-}
-
-h1 {
-  color: var(--secondary-color);
-  font-size: 4rem;
-  line-height: 5rem;
-  margin-bottom: 5%;
-}
-
-h3 {
-  color: var(--dark-grayish-blue);
-  font-weight: 400;
-  margin-bottom: 5%;
 }
 
 body {
@@ -43,38 +27,14 @@ a {
   text-decoration: none;
 }
 
-#header {
-  max-width: 1440px;
-  padding: 3% 10%;
-  position: relative;
+p {
+  font-size: 14px;
+  line-height: 2;
+  font-family: "Be Vietnam", sans-serif;
+  color: var(--dark-grayish-blue);
 }
 
-/* Nav Bar */
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.navbar ul {
-  display: flex;
-}
-
-.navbar li a {
-  padding: 0px 20px 0px 20px;
-  color: var(--very-dark-blue);
-}
-
-/* Showcase Area */
-
-.showcase {
-  display: flex;
-  padding-left: 3%;
-  margin: 100px;
-  margin-top: 3%;
-}
-
-/* Button */
+/* Utilities */
 .btn {
   display: inline-block;
   border: none;
@@ -83,18 +43,219 @@ a {
   padding: 0.75rem 1.5rem;
   margin-top: 1rem;
   text-decoration: none;
-  border-radius: 30px;
+  border-radius: 40px;
+  font-size: 14px;
+  font-weight: bold;
 }
 
-.btn:hover {
-  background:var(--btn-active);
+.btn-light {
+  background-color: var(--very-light-gray);
+  color: var(--primary-color);
 }
 
-/* BG Tablet Pattern */
-.bg-pattern {
+.bold-sm {
+  color: var(--secondary-color);
+  font-weight: bold;
+  display: block;
+}
+
+/* Background */
+
+.background {
+  background: url(/images/bg-tablet-pattern.svg) no-repeat;
+  background-size: 50%;
+  background-position: left -50% bottom 70%;
+}
+
+/* Main Section */
+
+#main-area {
+  padding: 3% 10%;
+  position: relative;
+}
+
+#main-area .container {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-gap: 1rem;
+}
+
+#main-area .container-a h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+  line-height: 1.2;
+  padding-bottom: 1rem;
+}
+#main-area .container-a h3 span {
+  display: block;
+}
+
+#main-area .container-a p {
+  display: inline-block;
+  width: 55%;
+}
+#main-area .container-b div {
+  position: relative;
+}
+
+#main-area .container-b .bold-sm {
+  display: block;
+}
+
+#main-area .container-b .btn-sm {
+  padding: 0.5rem 1.2rem;
+  position: relative;
+  top: -7rem;
+  margin-right: 1rem;
+}
+
+#main-area .container-b p {
+  font-size: 14px;
+  line-height: 2;
+  display: inline-block;
+  width: 80%;
+  margin-bottom: 3rem;
+}
+
+/* Testimonial Section */
+
+#testimonials {
+  position: relative;
+}
+.testimonial-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 3% 0;
+  margin-bottom: 3rem;
+}
+
+.testimonial-text h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+}
+
+#testimonials .testimonial-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+#testimonials .testimonial-list .container {
+  background-color: var(--very-light-gray);
+  margin: 0 0.5rem;
+  padding: 2.7rem 1rem 2rem;
+}
+
+#testimonials .testimonial-list p {
+  padding-top: 0.8rem;
+}
+
+.container-img {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-content: center;
+  grid-gap: 18rem;
   position: absolute;
-  z-index: -1;
-  top: -20%;
-  right: -12%;
+  top: -1.5rem;
+  left: 8.5rem;
+  z-index: 1;
+  padding: none;
+}
 
+.container-img img {
+  width: 3.5rem;
+}
+
+#testimonials .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  margin-bottom: 4rem;
+}
+
+/* Footer Section */
+
+#footer {
+  position: relative;
+  padding: 4% 0 0;
+}
+
+#footer .footer-a {
+  padding: 3% 10%;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-a h1 {
+  color: var(--very-light-gray);
+  font-size: 2.2rem;
+}
+
+.footer-a div:last-child {
+  padding: 0.8rem 0;
+}
+
+.footer-b {
+  background-color: var(--very-dark-blue);
+  padding: 3% 10%;
+}
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+}
+
+.footer-container ul li i {
+  padding: 0 1.5px;
+}
+
+.footer-container ul li a {
+  color: var(--very-light-gray);
+  line-height: 3.2;
+  font-size: 12px;
+}
+
+.footer-container ul li a:hover {
+  color: var(--primary-color);
+}
+
+.footer-container .input-box {
+  display: inline-block;
+  border: none;
+  background: var(--very-light-gray);
+  color: var(--primary-color);
+  padding: 0.8rem 0.8rem;
+  text-decoration: none;
+  border-radius: 40px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.footer-container .btn-small {
+  padding: 0.5rem 1.3rem 0.8rem;
+  border-radius: 20px;
+  margin-left: 3px;
+}
+
+.footer-container p:last-child {
+  text-align: right;
+}
+
+/* Attribution */
+
+.attribution {
+  background-color: var(--very-dark-blue);
+  color: var(--very-light-gray);
+}
+
+.attribution a:hover {
+  color: var(--primary-color);
 }
