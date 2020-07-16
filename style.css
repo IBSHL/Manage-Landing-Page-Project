@@ -14,6 +14,19 @@
   --very-light-gray: hsl(0, 0%, 98%);
 }
 
+h1 {
+  color: var(--secondary-color);
+  font-size: 4rem;
+  line-height: 5rem;
+  margin-bottom: 5%;
+}
+
+h3 {
+  color: var(--dark-grayish-blue);
+  font-weight: 400;
+  margin-bottom: 5%;
+}
+
 body {
   font-family: "Be Vietnam", sans-serif;
   background-color: #fff;
@@ -34,6 +47,37 @@ p {
   color: var(--dark-grayish-blue);
 }
 
+#header {
+  max-width: 1440px;
+  padding: 3% 10%;
+  position: relative;
+}
+
+/* Nav Bar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar li a {
+  padding: 0px 20px 0px 20px;
+  color: var(--very-dark-blue);
+}
+
+/* Showcase Area */
+
+.showcase {
+  display: flex;
+  padding-left: 3%;
+  margin: 100px;
+  margin-top: 3%;
+}
+
 /* Utilities */
 .btn {
   display: inline-block;
@@ -46,6 +90,22 @@ p {
   border-radius: 40px;
   font-size: 14px;
   font-weight: bold;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  border: none;
+  background: var(--primary-color);
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  text-decoration: none;
+  border-radius: 30px;
+}
+
+.btn:hover {
+  background:var(--btn-active);
 }
 
 .btn-light {
